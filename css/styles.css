@@ -29,8 +29,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.8em;
 }
 
-h1 { font-size: 2.8rem; }
-h2 { font-size: 2.2rem; }
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2.0rem; }
 h3 { font-size: 1.6rem; }
 h4 { font-size: 1.3rem; }
 
@@ -132,7 +132,7 @@ a {
   inset: 0;
   background-image: url("../img/Textura.jpg");
   background-repeat: repeat;
-  opacity: 0.09;                   /* muy sutil */
+  opacity: 1.3;                   /* muy sutil */
   pointer-events: none;
   z-index: 0;
 }
@@ -295,7 +295,7 @@ a {
   inset: 0;
   background-image: url("../img/Textura.jpg");
   background-repeat: repeat;
-  opacity: 0.09;                       /* muy sutil */
+  opacity: 1.3;                       /* muy sutil */
   pointer-events: none;
   z-index: 0;
 }
