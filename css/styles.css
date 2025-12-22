@@ -1,0 +1,546 @@
+/* ================= VARIABLES GLOBALES ================= */
+:root {
+  --azul: #0A2A43;
+  --naranja: #FF8C00;
+  --gris: #1E1E1E;
+  --blanco: #FFFFFF;
+
+  /* TIPOGRAFÍA */
+  --font-base: 'Roboto', sans-serif;
+  --font-title: 'Poppins', sans-serif;
+
+  --text-base: 1rem;
+  --line-base: 1.7;
+}
+
+/* ================= BASE ================= */
+body {
+  font-family: var(--font-base);
+  font-size: var(--text-base);
+  line-height: var(--line-base);
+  color: #000000;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  color: var(--azul);
+  line-height: 1.3;
+  margin-bottom: 0.8em;
+}
+
+h1 { font-size: 2.8rem; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.3rem; }
+
+p {
+  font-size: 1.5rem;
+  line-height: var(--line-base);
+  margin-bottom: 1.2em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ================= HEADER ================= */
+.main-header {
+  background: var(--azul);
+}
+
+/* BRAND */
+.brand-custom {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.brand-custom img {
+  height: 120px;
+}
+
+.brand-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-text {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--blanco);
+}
+
+.brand-slogan {
+  font-size: 1.5rem;
+  color: #6c757d;
+}
+
+/* MENU */
+#menu .navbar-nav {
+  background: var(--blanco);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 40px;
+  padding: 8px 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+#menu .nav-link {
+  color: var(--azul);
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+#menu .nav-link:hover {
+  background: rgba(10, 42, 67, 0.08);
+}
+
+.btn-contacto {
+  background: var(--naranja);
+  border-radius: 30px;
+  padding: 8px 22px;
+  font-weight: 600;
+  color: var(--blanco);
+}
+
+.btn-contacto:hover {
+  background: #e67e00;
+}
+
+/* ================= HERO ================= */
+.hero-section {
+  height: 60vh;
+  background: url('../img/ImagenMenu.jpg') center/cover no-repeat;
+}
+
+/* ================= INTRO ================= */
+.intro-section {
+  position: relative;              /* necesario para la textura */
+  padding: 60px 0;
+  background: var(--azul);
+  overflow: hidden;
+}
+
+/* Textura sutil */
+.intro-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/Textura.jpg");
+  background-repeat: repeat;
+  opacity: 0.09;                   /* muy sutil */
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Contenido encima de la textura */
+.intro-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Tipografía */
+.intro-section h1 {
+  color: var(--blanco);
+}
+
+.intro-section p {
+  color: var(--blanco);
+  max-width: 100%;
+}
+
+
+/* BOTÓN ACENTO */
+.btn-acento {
+  background: var(--naranja);
+  color: var(--blanco);
+  padding: 12px 30px;
+  border-radius: 30px;
+}
+
+.btn-acento:hover {
+  background: #e67e00;
+}
+
+/* ================= ACORDEÓN ================= */
+.corporativo-section {
+  padding: 20px 0;
+}
+
+.acordeon-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.acordeon-header {
+  background: none;
+  border: none;
+  padding: 20px 0;
+  font-family: var(--font-title);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--azul);
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.acordeon-header:hover {
+  color: #000;
+}
+
+.acordeon-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding-left: 0;
+}
+
+/* Párrafos dentro del acordeón */
+.acordeon-content p {
+  padding: 10px 0 25px;
+  font-family: var(--font-base);
+  font-size: 1.5rem;
+  line-height: var(--line-base);
+  color: #000; /* texto negro */
+  margin-bottom: 1.2em;
+}
+
+/* Listas dentro del acordeón */
+.acordeon-content ul {
+  padding-left: 28px;
+  margin: 10px 0 25px;
+  list-style: none;
+}
+
+.acordeon-content li {
+  font-family: var(--font-base);
+  font-size: 1.5rem;
+  line-height: var(--line-base);
+  color: #000; /* texto negro */
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 28px;
+}
+
+/* Viñetas naranjas */
+.acordeon-content li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: var(--naranja);
+  font-size: 1.2rem;
+}
+
+/* Texto destacado en azul */
+.acordeon-content li strong {
+  color: var(--azul);
+}
+
+/* Icono de despliegue */
+.icono {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+/* Cuando el item está activo */
+.acordeon-item.active .acordeon-content {
+  max-height: 1000px;
+}
+
+.acordeon-item.active .icono {
+  transform: rotate(180deg);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .acordeon-content p,
+  .acordeon-content li {
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+}
+
+/* ================= NOSOTROS ================= */
+.nosotros-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+
+/* ================= SERVICIOS ================= */
+.servicios-section {
+  position: relative;                  /* clave para la textura */
+  background: linear-gradient(135deg, var(--azul), #0a2a43);
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+/* Título de la sección de servicios */
+.servicios-section .section-title {
+  color: var(--blanco); /* texto blanco */
+  text-align: center;   /* opcional: centrar el título */
+  margin-bottom: 60px;  /* opcional: espacio inferior */
+}
+
+
+/* Textura sutil de fondo */
+.servicios-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/Textura.jpg");
+  background-repeat: repeat;
+  opacity: 0.09;                       /* muy sutil */
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Asegura que el contenido quede encima */
+.servicios-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ================= CARDS UNIFICADO ================= */
+.servicio-card {
+  padding: 55px 40px;
+  text-align: center;
+  border-radius: 22px;
+  border: 10px solid transparent;
+  background:
+    linear-gradient(var(--blanco), var(--blanco)) padding-box,
+    linear-gradient(135deg, var(--azul), var(--naranja)) border-box;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+  display: flex;
+  flex-direction: column; /* para alinear iconos, títulos y texto */
+  flex: 1;               /* estira la tarjeta para igualar altura */
+}
+
+.servicio-card:hover {
+  transform: translateY(-14px) scale(1.02);
+  box-shadow: 0 28px 65px rgba(0,0,0,0.18);
+}
+
+/* Iconos circulares */
+.icon-box {
+  width: 85px;
+  height: 85px;
+  margin: 0 auto 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  transition: all 0.4s ease;
+}
+
+.servicio-card:hover .icon-box {
+  background: linear-gradient(135deg, var(--azul), var(--naranja));
+  transform: rotate(8deg) scale(1.1);
+}
+
+.servicio-card h3 {
+  color: var(--azul);
+}
+
+/* Para que el párrafo ocupe todo el espacio y alinee los contenidos */
+.servicio-card p {
+  flex-grow: 1;
+}
+
+/* ================= CONTENEDORES PARA IGUALAR ALTURA ================= */
+
+/* Sección Servicios */
+.servicios .col-md-4 {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sección Misión y Visión */
+#mision-vision .row {
+  display: flex;
+  flex-wrap: wrap;          /* permite varias filas si es necesario */
+  gap: 30px;
+  justify-content: center;  /* mantiene centrado */
+}
+
+#mision-vision .col-md-6, 
+#mision-vision .col-lg-5 {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ================= METODOLOGÍA DEL SERVICIO ================= */
+
+.info-section {
+  padding: 100px 0;
+  background-color: var(--blanco);
+}
+
+.info-section h2 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* BLOQUES */
+.info-bloque {
+  background: var(--blanco);
+  padding: 35px 40px;
+  margin-bottom: 30px;
+  border-left: 5px solid var(--naranja);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-bloque:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* TÍTULOS */
+.info-bloque h3 {
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+  color: var(--azul);
+}
+
+/* LISTAS */
+.info-bloque ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-bloque li {
+  font-size: 1.5rem;
+  line-height: var(--line-base);
+  color: var(--gris);
+  margin-bottom: 15px;
+  padding-left: 28px;
+  position: relative;
+}
+
+/* ICONO DECORATIVO */
+.info-bloque li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: var(--naranja);
+  font-size: 1.1rem;
+}
+
+/* TEXTO DESTACADO */
+.info-bloque strong {
+  color: var(--azul);
+  font-weight: 600;
+}
+
+/* ANIMACIÓN REVEAL (SI YA LA USAS) */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .info-bloque {
+    padding: 25px;
+  }
+
+  .info-bloque h3 {
+    font-size: 1.4rem;
+  }
+
+  .info-bloque li {
+    font-size: 1.3rem;
+  }
+}
+
+/* ================= CONTACTO ================= */
+.contacto-section {
+  background: var(--blanco); /* Fondo blanco */
+  color: #333;
+  padding: 100px 0;
+  text-align: center;
+}
+
+/* FORMULARIO */
+.contacto-section .contact-form {
+  max-width: 600px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* INPUTS Y TEXTAREA */
+.contacto-section input,
+.contacto-section textarea {
+  padding: 15px;
+  border-radius: 22px;
+  border: 2px solid transparent;
+  
+  /* Borde degradado estilo tarjeta */
+  background:
+    linear-gradient(var(--blanco), var(--blanco)) padding-box,
+    linear-gradient(135deg, var(--azul), var(--naranja)) border-box;
+
+  font-size: 1rem;
+  width: 100%;
+  outline: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Foco */
+.contacto-section input:focus,
+.contacto-section textarea:focus {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* TEXTAREA */
+.contacto-section textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* BOTÓN */
+.contacto-section button {
+  padding: 15px;
+  border: none;
+  border-radius: 22px;
+  background: linear-gradient(135deg, var(--azul), var(--naranja));
+  color: var(--blanco);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacto-section button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: var(--gris);
+  color: var(--blanco);
+  padding: 20px 0;
+}
