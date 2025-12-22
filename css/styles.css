@@ -544,3 +544,217 @@ a {
   color: var(--blanco);
   padding: 20px 0;
 }
+
+/* ================= RESPONSIVE GLOBAL ================= */
+@media (max-width: 1024px) {
+  /* Header y brand */
+  .brand-custom {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .brand-custom img {
+    height: 100px;
+  }
+
+  .brand-text {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .brand-slogan {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  #menu .navbar-nav {
+    padding: 6px 12px;
+  }
+
+  #menu .nav-link {
+    padding: 6px 12px;
+    font-size: 1rem;
+  }
+
+  .btn-contacto {
+    padding: 6px 16px;
+    font-size: 1rem;
+  }
+
+  /* Hero */
+  .hero-section {
+    height: 50vh;
+    background-position: center top;
+  }
+
+  /* Intro section */
+  .intro-section {
+    padding: 50px 20px;
+  }
+
+  .intro-section h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .intro-section p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .btn-acento {
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
+
+  /* Servicios */
+  .servicios-section {
+    padding: 70px 20px;
+  }
+
+  .servicio-card {
+    padding: 35px 20px;
+    margin-bottom: 20px;
+  }
+
+  .servicio-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .servicio-card p {
+    font-size: 1rem;
+  }
+
+  .icon-box {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 20px;
+  }
+
+  /* Info / metodología */
+  .info-section {
+    padding: 60px 20px;
+  }
+
+  .info-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .info-bloque {
+    padding: 25px 20px;
+  }
+
+  .info-bloque h3 {
+    font-size: 1.4rem;
+  }
+
+  .info-bloque li {
+    font-size: 1.2rem;
+  }
+
+  /* Acordeón */
+  .acordeon-header {
+    font-size: 1.4rem;
+  }
+
+  .acordeon-content p,
+  .acordeon-content li {
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+
+  /* Contacto */
+  .contacto-section {
+    padding: 60px 20px;
+  }
+
+  .contacto-section .contact-form {
+    max-width: 100%;
+  }
+
+  .contacto-section input,
+  .contacto-section textarea {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .contacto-section button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 15px 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes más pequeños para móviles */
+  .brand-text {
+    font-size: 1.8rem;
+  }
+
+  .brand-slogan {
+    font-size: 1rem;
+  }
+
+  .hero-section {
+    height: 40vh;
+  }
+
+  .intro-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .intro-section p {
+    font-size: 1rem;
+  }
+
+  .servicio-card {
+    padding: 25px 15px;
+  }
+
+  .servicio-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .servicio-card p {
+    font-size: 0.95rem;
+  }
+
+  .icon-box {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+  }
+
+  .info-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .info-bloque h3 {
+    font-size: 1.2rem;
+  }
+
+  .info-bloque li {
+    font-size: 1rem;
+  }
+
+  .acordeon-header {
+    font-size: 1.2rem;
+  }
+
+  .contacto-section input,
+  .contacto-section textarea {
+    font-size: 0.9rem;
+  }
+
+  .contacto-section button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+}
