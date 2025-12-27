@@ -45,37 +45,163 @@ a {
   color: inherit;
 }
 
+/* ================= ICONOS DE REDES ================= */
+/* ===== ICONOS SOCIALES FLOTANTES ===== */
+.social-float {
+  position: fixed;
+  top: 50%;
+  left: 20px; /* usa right:20px si los quieres a la derecha */
+  transform: translateY(-50%);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Botón base */
+.social {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+  overflow: hidden;
+  transition: width 0.35s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+}
+
+/* Icono centrado */
+.social i {
+  font-size: 20px;
+  width: 48px;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Texto oculto correctamente */
+.social span {
+  position: absolute;
+  left: 48px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+/* Hover correcto */
+.social:hover {
+  width: 180px;
+}
+
+.social:hover span {
+  opacity: 1;
+}
+
+/* Colores corporativos */
+.whatsapp {
+  background-color: #1fa855;
+}
+
+.instagram {
+  background-color: #3f729b;
+}
+
+.facebook {
+  background-color: #1877f2;
+}
+
+/* Animación de entrada */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translate(-25px, -50%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, -50%);
+  }
+}
+
+.social-float {
+  animation: fadeSlide 0.8s ease-out;
+}
+
 /* ================= HEADER ================= */
 .main-header {
   background: var(--azul);
 }
 
-/* BRAND */
+/* Navbar con menos margen lateral */
+.main-header .navbar {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* ================= BRAND ================= */
 .brand-custom {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 12px;
+  max-width: 75%;
+  text-decoration: none;
 }
 
+/* Logo (si lo activas luego) */
 .brand-custom img {
   height: 120px;
 }
 
-.brand-info {
-  display: flex;
-  flex-direction: column;
+/* Texto del brand */
+.brand-text {
+  font-size: clamp(1.6rem, 3vw, 3.5rem);
+  font-weight: 700;
+  color: var(--blanco);
+  white-space: nowrap;
   line-height: 1.1;
 }
 
-.brand-text {
-  font-size: 3.5rem;
-  font-weight: 700;
-  color: var(--blanco);
+/* Slogan */
+.brand-slogan {
+  font-size: clamp(0.85rem, 1.5vw, 1.5rem);
+  color: #adb5bd;
+  line-height: 1.2;
 }
 
-.brand-slogan {
-  font-size: 1.5rem;
-  color: #6c757d;
+@media (max-width: 992px) {
+  .brand-custom {
+    max-width: 65%;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-custom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    max-width: 80%;
+  }
+
+  .brand-text {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 576px) {
+  .brand-custom {
+    max-width: 90%;
+  }
+
+  .brand-text {
+    font-size: 1.4rem;
+  }
+
+  .brand-slogan {
+    font-size: 0.85rem;
+  }
 }
 
 /* MENU */
@@ -481,6 +607,22 @@ a {
   text-align: center;
 }
 
+/*TEXTO INFORMATIVO*/
+
+.contacto-info {
+  max-width: 900px;
+  margin: 0 auto 45px;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--azul);
+}
+
+/* Destacar etiquetas */
+.contacto-info strong {
+  color: var(--azul);
+  font-weight: 600;
+}
+
 /* FORMULARIO */
 .contacto-section .contact-form {
   max-width: 600px;
@@ -685,6 +827,8 @@ a {
     padding: 12px;
   }
 
+
+  
   /* Footer */
   .footer {
     padding: 15px 20px;

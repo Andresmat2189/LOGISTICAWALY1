@@ -19,6 +19,8 @@
 
   <!-- Estilos propios -->
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
 
@@ -46,6 +48,26 @@
     </div>
   </nav>
 </header>
+
+<!-- ================= ICONOS DE REDES ================= -->
+
+<div class="social-float">
+  <a href="https://wa.me/573001234567" target="_blank" class="social whatsapp">
+    <i class="fab fa-whatsapp"></i>
+    <span>Whatsapp</span>
+  </a>
+
+  <a href="https://www.instagram.com/tuempresa" target="_blank" class="social instagram">
+    <i class="fab fa-instagram"></i>
+    <span>Instagram</span>
+  </a>
+
+  <a href="https://www.facebook.com/tuempresa" target="_blank" class="social facebook">
+    <i class="fab fa-facebook-f"></i>
+    <span>Facebook</span>
+  </a>
+</div>
+
 
 <!-- ================= HERO ================= -->
 <section id="inicio" class="hero-section">
@@ -164,10 +186,16 @@
           </div>
           <h3>Misión</h3>
           <p>
-            Brindar servicios especializados de cargue y descargue de mercancía,
+            Brindar servicios especializados de cargue y descargue de mercancía, 
+            respaldados por procesos eficientes de logística y almacenamiento, 
+            que garanticen seguridad, orden y cumplimiento en cada operación. 
+            Nos proyectamos como una empresa líder en el sector logístico, 
+            sustentada en un equipo humano altamente capacitado, comprometido con la excelencia operativa
+             y la satisfacción de nuestros clientes.
+            <!--Brindar servicios especializados de cargue y descargue de mercancía,
             apoyados por procesos eficientes de logística de almacenamiento,
             garantizando seguridad, orden y cumplimiento en cada operación,
-            mediante un equipo comprometido y capacitado.
+            mediante un equipo comprometido y capacitado.-->
           </p>
         </div>
       </div>
@@ -180,10 +208,14 @@
           </div>
           <h3>Visión</h3>
           <p>
-            Consolidarnos como una empresa referente en servicios de cargue,
+            Consolidarnos como una empresa líder a nivel nacional en servicios de cargue, 
+            descargue y almacenamiento, reconocida por la excelencia operativa, la confiabilidad y la optimización continua
+             de nuestros procesos. En un horizonte de cinco años, proyectamos una expansión estratégica hacia mercados globales, 
+             fortaleciendo nuestra presencia y generando valor sostenible para nuestros clientes, aliados y colaboradores.
+            <!--Consolidarnos como una empresa referente en servicios de cargue,
             descargue y almacenamiento, reconocida por la eficiencia operativa,
             la confiabilidad y la mejora continua de nuestros procesos,
-            generando valor sostenible para nuestros clientes.
+            generando valor sostenible para nuestros clientes.-->
           </p>
         </div>
       </div>
@@ -325,7 +357,13 @@
 <section id="contacto" class="contacto-section">
   <div class="container">
     <h2 class="section-title">Contáctanos</h2>
-    <p>Email: logisticawalywaly@gmail.com | Tel: +57 3222460072</p>
+    <p class="contacto-info">
+      <strong>Email:</strong> logisticawalywaly@gmail.com &nbsp;|&nbsp;
+      <strong>Tel:</strong> +57 322 246 0072 &nbsp;|&nbsp;
+      <strong>Dirección:</strong> Calle 4 Sur # 10A – 26 <br>
+      <strong>Horario de atención:</strong> Lunes a sábado · 7:00 a.m. – 6:00 p.m. &nbsp;|&nbsp;
+      <strong>Cobertura:</strong> Operaciones locales y regionales
+    </p>
 
     <!-- Formulario -->
     <form action="https://formspree.io/f/meejrdky" method="POST" class="contact-form">
@@ -334,6 +372,9 @@
       </div>
       <div class="form-group">
         <input type="email" name="email" placeholder="Correo electrónico" required>
+      </div>
+      <div class="form-group">
+        <input type="telefono" name="Telefono de contacto" placeholder="telefono" required>
       </div>
       <div class="form-group">
         <textarea name="mensaje" placeholder="Escribe tu mensaje" required></textarea>
