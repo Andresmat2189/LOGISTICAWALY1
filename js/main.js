@@ -29,5 +29,23 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   window.addEventListener("scroll", revealOnScroll);
-  revealOnScroll(); // Ejecutar al cargar
+  revealOnScroll();
+
+  /* ================= HEADER FIJO + SOMBRA ================= */
+  const header = document.querySelector('.main-header');
+
+  if (header) {
+    function headerOnScroll() {
+      if (window.scrollY > 10) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }
+
+    window.addEventListener('scroll', headerOnScroll);
+    headerOnScroll();
+  }
+
 });
+

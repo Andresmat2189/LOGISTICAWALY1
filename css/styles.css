@@ -46,7 +46,7 @@ a {
 }
 
 /* ================= ICONOS DE REDES ================= */
-/* ===== ICONOS SOCIALES FLOTANTES ===== */
+
 .social-float {
   position: fixed;
   top: 50%;
@@ -236,6 +236,34 @@ a {
 .btn-contacto:hover {
   background: #e67e00;
 }
+
+/* ================= HEADER FIJO ================= */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1050; /* mayor que Bootstrap */
+  background: var(--azul);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Evitar que el navbar mueva el layout */
+.main-header .navbar {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+/* Sombra al hacer scroll */
+.main-header.scrolled {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Compensar header fijo */
+body {
+  padding-top: 130px;
+}
+
 
 /* ================= HERO ================= */
 .hero-section {
